@@ -5,6 +5,7 @@ const schema = require("./schema");
 const users = [{ id: 1, username: "Vasya", age: 25 }];
 
 const app = express();
+
 app.use(cors());
 
 const createUser = (input) => {
@@ -14,6 +15,7 @@ const createUser = (input) => {
 		...input,
 	};
 };
+
 const root = {
 	getAllUsers: () => {
 		return users;
